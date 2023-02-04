@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Doloman;
+  font-weight: bolder;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a[href^='mailto:']::after {
+  content: ' (&#x1f4e8;&#x2197;&#xfe0f;)';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.swiper-box {
+  width: 1024px;
+  height: 512px;
+  position: fixed;
+  left: 50%;
+  top: 2000px;
+  transform: translate(-50%, -50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.swiper-box.exited {
+  animation: swiperBack 1.5s forwards ease-in;
+}
+
+@font-face {
+  font-family: 'MultiroundPro';
+  src: local('MultiroundPro'), url('./fonts/Multiround\ Pro/MultiroundPro.otf');
+}
+
+@font-face {
+  font-family: 'Doloman';
+  src: local('Doloman Pavljenko'),
+    url('./fonts/Doloman\ Pavljenko/DolomanPavljenko.otf');
+}
+
+.app {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.start-text {
+  position: relative;
+  font-size: 40px;
+  line-height: 60px;
+  color: gray;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  text-align: center;
+  text-shadow: rgb(170, 167, 156) 1px 0 10px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+supported by Chrome, Edge, Opera and Firefox */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.start-text span {
+  color: #ffcc00;
+}
+
+.start-text {
+  transition: 0.1s;
+}
+
+.start-text.entered:hover {
+  transition: 0.5s;
+  font-size: 45px;
+}
+
+.start-text.exiting {
+  animation: goldenText 1s forwards;
+}
+
+.start-text.exited {
+  animation: clearText 1.5s forwards;
+}
+
+/* .start-text.exiting {
+  opacity: 1;
+} */
+
+/* .start-text.exited {
+  opacity: 1;
+} */
+
+/* .start-text.entering {
+  animation: startText 1 forwards;
+} */
+
+@keyframes clearText {
+  0% {
+    top: 0;
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    top: -1000px;
+    opacity: 0;
+  }
+}
+
+@keyframes swiperBack {
+  0% {
+    top: 2000px;
+  }
+  90% {
+    top: 47%;
+  }
+  95% {
+    top: 51%;
+  }
+  98% {
+    top: 49.5%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes goldenText {
+  0% {
+    font-size: 42px;
+    text-shadow: rgb(170, 167, 156) 1px 0 10px;
+  }
+  25% {
+    font-size: 45px;
+    text-shadow: #ffcc00 5px 0 10px;
+  }
+  50% {
+    font-size: 41px;
+    text-shadow: #ffcc00 5px 0 10px;
+  }
+  100% {
+    font-size: 43px;
+    text-shadow: rgb(170, 167, 156) 1px 0 10px;
   }
 }

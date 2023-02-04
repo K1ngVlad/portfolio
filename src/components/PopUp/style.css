@@ -1,0 +1,60 @@
+.PopUp {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.PopUp.entering {
+  animation: openPopUp 0.5s forwards;
+}
+
+.PopUp.exiting {
+  animation: closePopUp 0.5s forwards;
+}
+
+@keyframes openPopUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closePopUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.popUpBox {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  height: 700px;
+  border-radius: 20px;
+  background: rgb(184, 198, 202);
+  box-shadow: 0 0 1px 5px gray;
+}
+
+.popUpImg {
+  border-radius: 20px;
+  width: 1200px;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.infoBox {
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+}
