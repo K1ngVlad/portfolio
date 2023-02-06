@@ -1,26 +1,31 @@
 import { useRef, useState } from 'react';
-import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Transition } from 'react-transition-group';
+import { CSSTransition, Transition } from 'react-transition-group';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
-import startSound from './sound/start.mp3';
+import { Main } from './pages/Main';
+import { Portfolio } from './pages/Portfolio';
 
 import './App.css';
-import { Swipe } from './components/Swipe';
-import { Footer } from './components/Footer/Footer';
-import { PopUp } from './components/PopUp';
+
+import startSound from './sound/start.mp3';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 const startAudio = new Audio(startSound);
 startAudio.currentTime = 0.3;
 
 const App = () => {
-  const [start, setStart] = useState(true);
-  const [popUp, setPopUp] = useState(false);
-  const [popUpType, setPopUpType] = useState(null);
+  console.log(window.location.pathname);
+  const [start, setStart] = useState(false);
   const ref = useRef(null);
 
+  const routes = [
+    { path: '/', Component: Main },
+    { path: '/portfolio', Component: Portfolio },
+  ];
+
   const onMouseHeandler = (e) => {
-    if (!start) return;
+    if (start || window.location.pathname !== '/') return;
     const width = document.documentElement.clientWidth;
     const height = document.documentElement.clientHeight;
     const x = e.clientX;
@@ -31,9 +36,9 @@ const App = () => {
   };
 
   const startHeandler = () => {
-    if (!start) return;
+    if (start || window.location.pathname !== '/') return;
     startAudio.play();
-    setStart(false);
+    setStart(true);
   };
 
   return (
@@ -44,31 +49,44 @@ const App = () => {
       }}
       onClick={startHeandler}
     >
-      <Transition in={start} timeout={500}>
-        {(state) => (
-          <h2 ref={ref} className={`start-text ${state}`}>
-            Добрый день! <br /> <span>нажмите в любом месте экрана</span>
-          </h2>
-        )}
-      </Transition>
-
-      <Transition in={start} timeout={300}>
-        {(state) => <Header className={state} />}
-      </Transition>
-
-      <Transition in={start} timeout={300}>
-        {(state) => (
-          <div className={`swiper-box ${state}`}>
-            <Swipe setPopUpType={setPopUpType} setPopUp={setPopUp} />
-          </div>
-        )}
-      </Transition>
-      <Footer />
-      <Transition unmountOnExit mountOnEnter in={popUp} timeout={500}>
-        {(state) => (
-          <PopUp setPopUp={setPopUp} id={popUpType} className={state} />
-        )}
-      </Transition>
+      <BrowserRouter>
+        <Transition
+          in={start || window.location.pathname !== '/'}
+          timeout={2000}
+        >
+          {(state) => (
+            <h2 ref={ref} className={`start-text ${state}`}>
+              Добрый день! <br /> <span>нажмите в любом месте экрана</span>
+            </h2>
+          )}
+        </Transition>
+        <Transition
+          in={start || window.location.pathname !== '/'}
+          timeout={3500}
+        >
+          {(state) => <Header className={state} />}
+        </Transition>
+        {/* <Main start={start} /> */}
+        {routes.map(({ path, Component }) => {
+          return (
+            <Route key={path} exact path={path}>
+              {({ match }) => {
+                return (
+                  <CSSTransition
+                    timeout={500}
+                    classNames="page"
+                    unmountOnExit
+                    in={match != null}
+                  >
+                    <Component start={start} />
+                  </CSSTransition>
+                );
+              }}
+            </Route>
+          );
+        })}
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 };

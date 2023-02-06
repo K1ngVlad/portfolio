@@ -20,7 +20,7 @@ const portfolio = [
   },
   {
     id: 2,
-    name: 'MySign',
+    name: 'MySign Studio',
     img: mySign,
     url: 'https://k1ngvlad.github.io/public/',
     gitHub: 'https://github.com/K1ngVlad/public',

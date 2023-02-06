@@ -3,7 +3,10 @@ import { portfolio } from '../../api/portfolio';
 
 const PopUp = (props) => {
   const onClickHeandler = (e) => {
-    if (e.target.classList.contains('PopUp')) {
+    if (
+      e.target.classList.contains('PopUp') ||
+      e.target.classList.contains('popUpClose')
+    ) {
       props.setPopUp(null);
     }
   };
@@ -18,11 +21,12 @@ const PopUp = (props) => {
       className={`PopUp ${props.className}`}
     >
       <div className="popUpBox">
+        <button className="popUpClose">╳</button>
         <img className="popUpImg" alt={api.name} src={api.img} />
         <div className="infoBox">
-          <h2>{api.name}</h2>
+          <h2 className="popUpTitle">{api.name}</h2>
           <a href={api.url}>
-            <button>Посмотреть</button>
+            <button className="popUpBtn">Открыть</button>
           </a>
         </div>
       </div>

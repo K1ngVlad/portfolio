@@ -3,8 +3,68 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+  transition: 0.5s;
   /* width: 100%;
   height: auto; */
+  cursor: pointer;
+}
+
+.leftNav,
+.rightNav {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 60px;
+  background: rgb(196, 218, 236);
+  color: rgb(104, 109, 112);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.leftNav:hover,
+.rightNav:hover {
+  color: rgb(196, 218, 236);
+  background: rgb(113, 133, 150);
+}
+
+.leftNav:active,
+.rightNav:active {
+  color: rgb(219, 230, 240);
+  background: rgb(148, 167, 184);
+}
+
+.leftNav {
+  top: 50%;
+  left: -100px;
+  transform: translate(-50%, -50%);
+}
+
+.rightNav {
+  top: 50%;
+  right: -100px;
+  transform: translate(50%, -50%);
+}
+
+.pagination-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide:hover {
+  transform: scale(1.1);
 }
 
 .swiper-pagination {

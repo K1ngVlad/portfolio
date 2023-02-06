@@ -10,9 +10,12 @@
   border-radius: 0px 0px 30px 30px;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
+  /* font-family: MultiroundPro; */
 }
 
 .headerTitle {
+  font-family: MultiroundPro;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,9 +28,27 @@
     animation: goldenText 1s forwards;
   } */
 
-.Header.exited {
+.Header.entering {
   display: flex;
-  animation: upHeader 1s forwards;
+  animation: upHeader 1.75s forwards;
+}
+
+.Header.entered {
+  display: flex;
+  top: 0;
+}
+
+.Header.entering .links-box #link_0 {
+  display: flex;
+  animation: firstLink 2.5s forwards;
+}
+.Header.entering .links-box #link_1 {
+  display: flex;
+  animation: firstLink 3s forwards;
+}
+.Header.entering .links-box #link_2 {
+  display: flex;
+  animation: firstLink 3.5s forwards;
 }
 
 @keyframes upHeader {
@@ -39,6 +60,18 @@
   }
 }
 
+@keyframes firstLink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .links-box {
   display: flex;
   align-items: center;
@@ -46,8 +79,13 @@
 }
 
 .link {
+  transition: 0.3s;
   width: 50px;
   height: 50px;
+}
+
+.link:hover {
+  transform: rotate(20deg);
 }
 
 .links-box {

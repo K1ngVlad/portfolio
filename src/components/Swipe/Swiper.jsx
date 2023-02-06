@@ -16,35 +16,46 @@ const Swipe = (props) => {
   };
 
   return (
-    <Swiper
-      modules={[Navigation, Pagination]}
-      pagination={{
-        clickable: true,
-        dynamicBullets: true,
-      }}
-      navigation={{ clickable: true }}
-      spaceBetween={50}
-      style={{
-        height: '100%',
-        borderRadius: 10,
-        boxShadow: '0 0 10px 1px grey',
-      }}
-      className="swiper"
-      slidesPerView={1}
-    >
-      {portfolio.map((e) => {
-        return (
-          <SwiperSlide
-            onClick={() => {
-              onClickHeandler(e.id);
-            }}
-            key={e.id}
-          >
-            <img className="slide" id={e.id} alt={e.name} src={e.img} />
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <>
+      <div className="leftNav">{'<'}</div>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        pagination={{
+          clickable: true,
+          enabled: true,
+          el: '.pagination-box',
+        }}
+        navigation={{
+          clickable: true,
+          enabled: true,
+          prevEl: '.leftNav',
+          nextEl: '.rightNav',
+        }}
+        spaceBetween={50}
+        style={{
+          height: '100%',
+          borderRadius: 10,
+          boxShadow: '0 0 10px 1px grey',
+        }}
+        className="swiper"
+        slidesPerView={1}
+      >
+        {portfolio.map((e) => {
+          return (
+            <SwiperSlide
+              onClick={() => {
+                onClickHeandler(e.id);
+              }}
+              key={e.id}
+            >
+              <img className="slide" id={e.id} alt={e.name} src={e.img} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      <div className="pagination-box"></div>
+      <div className="rightNav">{'>'}</div>
+    </>
   );
 };
 

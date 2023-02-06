@@ -6,21 +6,12 @@
   font-weight: bolder;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a[href^='mailto:']::after {
   content: ' (&#x1f4e8;&#x2197;&#xfe0f;)';
-}
-
-.swiper-box {
-  width: 1024px;
-  height: 512px;
-  position: fixed;
-  left: 50%;
-  top: 2000px;
-  transform: translate(-50%, -50%);
-}
-
-.swiper-box.exited {
-  animation: swiperBack 1.5s forwards ease-in;
 }
 
 @font-face {
@@ -40,6 +31,40 @@ a[href^='mailto:']::after {
   justify-content: center;
   width: 100vw;
   min-height: 100vh;
+}
+
+.page {
+  position: absolute;
+}
+
+.page-enter-active {
+  animation: 0.5s fade-in forwards;
+}
+
+.page-exit-active {
+  animation: 0.5s fade-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
 }
 
 .start-text {
@@ -71,32 +96,21 @@ supported by Chrome, Edge, Opera and Firefox */
   transition: 0.1s;
 }
 
-.start-text.entered:hover {
+.start-text.exited:hover {
   transition: 0.5s;
   font-size: 45px;
 }
 
-.start-text.exiting {
-  animation: goldenText 1s forwards;
+.start-text.entering {
+  animation: goldenText 2s forwards;
 }
 
-.start-text.exited {
-  animation: clearText 1.5s forwards;
+.start-text.entered {
+  opacity: 0;
+  top: -1000px;
 }
 
-/* .start-text.exiting {
-  opacity: 1;
-} */
-
-/* .start-text.exited {
-  opacity: 1;
-} */
-
-/* .start-text.entering {
-  animation: startText 1 forwards;
-} */
-
-@keyframes clearText {
+/* @keyframes clearText {
   0% {
     top: 0;
     opacity: 1;
@@ -105,40 +119,34 @@ supported by Chrome, Edge, Opera and Firefox */
     top: -1000px;
     opacity: 0;
   }
-}
+} */
 
-@keyframes swiperBack {
-  0% {
-    top: 2000px;
-  }
-  90% {
-    top: 47%;
-  }
-  95% {
-    top: 51%;
-  }
-  98% {
-    top: 49.5%;
-  }
-  100% {
-    top: 50%;
-  }
-}
 @keyframes goldenText {
   0% {
+    opacity: 1;
+    top: 0;
     font-size: 42px;
     text-shadow: rgb(170, 167, 156) 1px 0 10px;
   }
-  25% {
+  10% {
     font-size: 45px;
     text-shadow: #ffcc00 5px 0 10px;
   }
-  50% {
+  20% {
     font-size: 41px;
     text-shadow: #ffcc00 5px 0 10px;
+    opacity: 1;
+    top: 0;
   }
-  100% {
+  40% {
     font-size: 43px;
     text-shadow: rgb(170, 167, 156) 1px 0 10px;
   }
+  100% {
+    opacity: 0;
+    top: -1000px;
+  }
+}
+
+.start-text.ani-not {
 }

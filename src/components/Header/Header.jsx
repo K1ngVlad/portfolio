@@ -7,9 +7,9 @@ const Header = (props) => {
       <h1 className="headerTitle">Портфолио</h1>
       <div className="logo"></div>
       <div className="links-box">
-        {links.map((e) => {
+        {links.map((e, i) => {
           return (
-            <a href={e.link} key={e.name}>
+            <a id={`link_${i}`} href={e.link} key={e.name}>
               <img className="link" src={e.img} alt={e.name} />
             </a>
           );
