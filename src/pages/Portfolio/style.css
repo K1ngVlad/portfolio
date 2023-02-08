@@ -1,5 +1,121 @@
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
-  min-height: 100vh;
-  padding: 100px 50px 0 50px;
+  height: 100vh;
+  padding-top: 100px;
+  /* padding: 100px 50px 0 50px; */
+}
+
+.portfolio-box {
+  display: flex;
+  flex-direction: column;
+  width: 1300px;
+  height: 100%;
+}
+
+.portfolio-swiper {
+  width: 100%;
+  height: 900px;
+  /* background-color: blue; */
+}
+
+.btnToStartLink {
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.btnToStart {
+  font-family: MultiroundPro;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(0, 170, 192);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnToStart:hover {
+  background-color: rgb(3, 107, 121);
+}
+
+.btnToStart:active {
+  background-color: rgb(29, 29, 29);
+}
+
+.portfolioPage {
+  padding: 30px;
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 350px 350px;
+}
+
+.portfolioItem {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.portfolioItemTitle {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.portfolioItemTitle h3 {
+  /* font-size: 20px; */
+  font-family: MultiroundPro;
+}
+
+.portfolioImg {
+  width: 100%;
+  height: 300px;
+}
+
+.lol {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftPortfolioBtn,
+.rightPortfolioBtn {
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 50;
+  width: 50px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(47, 47, 68);
+}
+
+.leftPortfolioBtn {
+  left: 550px;
+}
+
+.rightPortfolioBtn {
+  right: 550px;
 }

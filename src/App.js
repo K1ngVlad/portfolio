@@ -78,7 +78,7 @@ const App = () => {
                     unmountOnExit
                     in={match != null}
                   >
-                    <Component start={start} />
+                    <Component start={start} setStart={setStart} />
                   </CSSTransition>
                 );
               }}

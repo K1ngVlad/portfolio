@@ -10,8 +10,30 @@ body {
   overflow-x: hidden;
 }
 
-a[href^='mailto:']::after {
-  content: ' (&#x1f4e8;&#x2197;&#xfe0f;)';
+.btn {
+  font-family: MultiroundPro;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(0, 170, 192);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(3, 107, 121);
+}
+
+.btn:active {
+  background-color: rgb(29, 29, 29);
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 @font-face {
@@ -34,6 +56,8 @@ a[href^='mailto:']::after {
 }
 
 .page {
+  top: 0;
+  left: 0;
   position: absolute;
 }
 
@@ -108,6 +132,7 @@ supported by Chrome, Edge, Opera and Firefox */
 .start-text.entered {
   opacity: 0;
   top: -1000px;
+  display: none;
 }
 
 /* @keyframes clearText {
@@ -148,5 +173,18 @@ supported by Chrome, Edge, Opera and Firefox */
   }
 }
 
-.start-text.ani-not {
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

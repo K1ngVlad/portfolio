@@ -25,7 +25,7 @@ const PopUp = (props) => {
         <img className="popUpImg" alt={api.name} src={api.img} />
         <div className="infoBox">
           <h2 className="popUpTitle">{api.name}</h2>
-          <a href={api.url}>
+          <a href={api.url} target="_blank" rel="noreferrer">
             <button className="popUpBtn">Открыть</button>
           </a>
         </div>
