@@ -42,6 +42,7 @@ const Main = (props) => {
               <NavLink to="./about">
                 <button className={'btn'}>Обо мне</button>
               </NavLink>
+              z
               <NavLink to="./portfolio">
                 <button className={'btn'}>Посмотреть больше работ</button>
               </NavLink>
