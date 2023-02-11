@@ -27,7 +27,7 @@ const App = () => {
   ];
 
   const onMouseHeandler = (e) => {
-    if (start || window.location.pathname !== '/') return;
+    if (start || window.location.pathname !== '/portfolio') return;
     const width = document.documentElement.clientWidth;
     const height = document.documentElement.clientHeight;
     const x = e.clientX;
@@ -38,7 +38,7 @@ const App = () => {
   };
 
   const startHeandler = () => {
-    if (start || window.location.pathname !== '/') return;
+    if (start || window.location.pathname !== '/portfolio') return;
     startAudio.play();
     setStart(true);
   };
@@ -51,9 +51,9 @@ const App = () => {
       }}
       onClick={startHeandler}
     >
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Transition
-          in={start || window.location.pathname !== '/'}
+          in={start || window.location.pathname !== '/portfolio'}
           timeout={2000}
         >
           {(state) => (
@@ -63,7 +63,7 @@ const App = () => {
           )}
         </Transition>
         <Transition
-          in={start || window.location.pathname !== '/'}
+          in={start || window.location.pathname !== '/portfolio'}
           timeout={3500}
         >
           {(state) => <Header className={state} />}
