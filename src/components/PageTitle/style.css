@@ -1,0 +1,48 @@
+.pageTitleBox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 75px;
+  align-items: center;
+}
+
+.pageTitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: MultiroundPro;
+}
+
+.mainPage .titleBack {
+  display: none;
+}
+
+.mainPage {
+  margin-top: 100px;
+}
+
+.mainPage.exited {
+  transform: translateY(-500px);
+}
+
+.mainPage.entering {
+  animation: titleBack 2s forwards;
+}
+
+.mainPage.entered {
+  transform: translateY(0);
+}
+
+@keyframes titleBack {
+  0% {
+    transform: translateY(-500px);
+  }
+  50% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

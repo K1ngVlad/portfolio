@@ -1,4 +1,4 @@
-import gitHub from '../../assets/svg/github.svg';
+import gitHub from '../../assets/svg/github-light.svg';
 import telegram from '../../assets/svg/telegram.svg';
 import vk from '../../assets/svg/vk.svg';
 

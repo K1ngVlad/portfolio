@@ -6,6 +6,7 @@ import { Navigation, Pagination } from 'swiper';
 
 import { fullPortfolio } from '../../api/fullPortfolio';
 import { useEffect } from 'react';
+import { PageTitle } from '../../components/PageTitle';
 
 const api = [];
 
@@ -24,15 +25,17 @@ const Portfolio = (props) => {
   return (
     <div className="portfolio">
       <section className="portfolio-box">
-        <NavLink className="btnToStartLink" to="/">
+        {/* <NavLink className="btnToStartLink" to="/">
           <button className="btnToStart">На главную</button>
-        </NavLink>
+        </NavLink> */}
+        <PageTitle>Портфолио</PageTitle>
         <Swiper
           className="portfolio-swiper"
           modules={[Navigation, Pagination]}
           pagination={{
             clickable: true,
             enabled: true,
+            bulletActiveClass: 'act-bul',
             renderBullet: (index, className) => {
               return (
                 '<span class="' +
@@ -51,8 +54,6 @@ const Portfolio = (props) => {
             nextEl: '.rightPortfolioBtn',
           }}
         >
-          <button className="leftPortfolioBtn noselect">🡸</button>
-          <button className="rightPortfolioBtn noselect">🡺</button>
           {api.map((e, i) => {
             return (
               <SwiperSlide key={i}>
@@ -64,7 +65,7 @@ const Portfolio = (props) => {
                           target="_blank"
                           href={e.url}
                           key={e.id}
-                          className="noselect"
+                          className="noselect x"
                           rel="noreferrer"
                         >
                           <div className="portfolioItem">
@@ -86,6 +87,10 @@ const Portfolio = (props) => {
               </SwiperSlide>
             );
           })}
+          <div className="portfolioBottom">
+            <button className="leftPortfolioBtn noselect">🡸</button>
+            <button className="rightPortfolioBtn noselect">🡺</button>
+          </div>
         </Swiper>
       </section>
     </div>

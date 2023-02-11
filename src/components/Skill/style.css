@@ -1,0 +1,30 @@
+.skill {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgba(145, 166, 185, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  margin: 5px;
+  white-space: normal;
+  display: inline-block;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.skill a {
+  color: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.3s;
+}
+
+.skill:hover {
+  background-color: rgba(5, 56, 100, 0.5);
+}
+
+.skill:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.skill:active a {
+  color: rgba(255, 255, 255, 0.5);
+}

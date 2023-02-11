@@ -1,0 +1,30 @@
+.topAbout {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+}
+
+.aboutName {
+  font-size: 40px;
+}
+
+.blockquote {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.aboutInfo {
+  display: flex;
+  margin-left: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+}

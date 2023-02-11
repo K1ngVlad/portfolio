@@ -10,6 +10,7 @@ import './App.css';
 
 import startSound from './sound/start.mp3';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { About } from './pages/About/About';
 
 const startAudio = new Audio(startSound);
 startAudio.currentTime = 0.3;
@@ -22,6 +23,7 @@ const App = () => {
   const routes = [
     { path: '/', Component: Main },
     { path: '/portfolio', Component: Portfolio },
+    { path: '/about', Component: About },
   ];
 
   const onMouseHeandler = (e) => {

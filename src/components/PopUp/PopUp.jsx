@@ -1,6 +1,8 @@
 import './style.css';
 import { portfolio } from '../../api/portfolio';
 
+import git from '../../assets/svg/github.svg';
+
 const PopUp = (props) => {
   const onClickHeandler = (e) => {
     if (
@@ -25,9 +27,22 @@ const PopUp = (props) => {
         <img className="popUpImg" alt={api.name} src={api.img} />
         <div className="infoBox">
           <h2 className="popUpTitle">{api.name}</h2>
-          <a href={api.url} target="_blank" rel="noreferrer">
-            <button className="popUpBtn">Открыть</button>
-          </a>
+          <div className="popUpLinks">
+            <a href={api.url} target="_blank" rel="noreferrer">
+              <button className="popUpBtn">Открыть</button>
+            </a>
+            <a
+              draggable={false}
+              className="noselect"
+              href={api.gitHub}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="gitBtn noselect">
+                <img alt="gitHub" draggable={false} src={git} />
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

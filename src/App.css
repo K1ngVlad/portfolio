@@ -113,7 +113,9 @@ supported by Chrome, Edge, Opera and Firefox */
 }
 
 .start-text span {
-  color: #ffcc00;
+  font-family: MultiroundPro;
+  color: #619597;
+  font-size: 30px;
 }
 
 .start-text {
@@ -127,6 +129,10 @@ supported by Chrome, Edge, Opera and Firefox */
 
 .start-text.entering {
   animation: goldenText 2s forwards;
+}
+
+.start-text.entering span {
+  animation: goldenText2 2s forwards;
 }
 
 .start-text.entered {
@@ -165,6 +171,33 @@ supported by Chrome, Edge, Opera and Firefox */
   }
   40% {
     font-size: 43px;
+    text-shadow: rgb(170, 167, 156) 1px 0 10px;
+  }
+  100% {
+    opacity: 0;
+    top: -1000px;
+  }
+}
+
+@keyframes goldenText2 {
+  0% {
+    opacity: 1;
+    top: 0;
+    font-size: 32px;
+    text-shadow: rgb(170, 167, 156) 1px 0 10px;
+  }
+  10% {
+    font-size: 35px;
+    text-shadow: #ffcc00 5px 0 10px;
+  }
+  20% {
+    font-size: 31px;
+    text-shadow: #ffcc00 5px 0 10px;
+    opacity: 1;
+    top: 0;
+  }
+  40% {
+    font-size: 33px;
     text-shadow: rgb(170, 167, 156) 1px 0 10px;
   }
   100% {

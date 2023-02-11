@@ -1,0 +1,31 @@
+.about {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.aboutBox {
+  width: 1300px;
+}
+
+.aboutHr {
+  margin: 20px 0 20px 0;
+}
+
+.aboutTitle {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.aboutBlock {
+  font-size: 22px;
+  padding: 0 20px 0;
+}
+
+.descriptSkills {
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
