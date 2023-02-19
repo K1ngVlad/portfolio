@@ -167,3 +167,48 @@
   width: 450px;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1599px) {
+  .popUpBox {
+    width: 1050px;
+    height: 625px;
+  }
+  .popUpImg {
+    width: 1000px;
+    height: 500px;
+  }
+  .infoBox {
+    padding: 10px 200px 0 200px;
+  }
+  .popUpTitle {
+    font-size: 20px;
+  }
+  .popUpBtn {
+    width: 150px;
+    height: 50px;
+  }
+  .gitBtn {
+    width: 50px;
+    height: 50px;
+  }
+  .popUpBtn::after {
+    height: 50px;
+  }
+  .popUpLinks {
+    width: 250px;
+  }
+  .popUpClose {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}

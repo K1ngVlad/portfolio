@@ -46,3 +46,24 @@
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 1399px) {
+  .pageTitleBox {
+    height: 50px;
+  }
+  .pageTitle {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pageTitleBox {
+    height: 30px;
+  }
+  .pageTitle {
+    font-size: 16px;
+    transform: none;
+    position: static;
+    margin-left: 20px;
+  }
+}

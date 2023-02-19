@@ -19,6 +19,7 @@ const Swipe = (props) => {
     <>
       <div className="leftNav">{'<'}</div>
       <Swiper
+        loop={true}
         modules={[Navigation, Pagination]}
         pagination={{
           clickable: true,

@@ -86,6 +86,7 @@
 .portfolioItemTitle h3 {
   /* font-size: 20px; */
   font-family: MultiroundPro;
+  text-align: center;
 }
 
 .portfolioItem {
@@ -163,4 +164,26 @@
 .act-bul {
   opacity: 1;
   background: rgb(0, 170, 192);
+}
+
+@media screen and (max-width: 1399px) {
+  .portfolio-box {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 100%;
+  }
+  .portfolio-swiper {
+    height: 650px;
+  }
+  .portfolioItemTitle {
+    height: 20%;
+  }
+  .leftPortfolioBtn {
+    left: 325px;
+  }
+
+  .rightPortfolioBtn {
+    right: 325px;
+  }
 }

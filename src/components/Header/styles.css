@@ -23,6 +23,7 @@
   transform: translate(-50%, -50%);
   color: white;
   letter-spacing: 3px;
+  text-align: center;
 }
 
 .Header.entering {
@@ -89,7 +90,8 @@
   width: 200px;
 }
 
-.headBtn {
+.headBtn,
+.minibtn {
   font-family: MultiroundPro;
   font-size: 20px;
   color: white;
@@ -102,10 +104,107 @@
   transition: 0.3s;
 }
 
+.minibtn {
+  display: none;
+}
+
 .headBtn:hover {
   background-color: rgb(0, 170, 192);
 }
 
 .headBtn:active {
   background-color: rgb(29, 29, 29);
+}
+
+@media screen and (max-width: 1399px) {
+  .headBtn {
+    font-size: 16px;
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .Header {
+    justify-content: flex-start;
+    padding: 0 25px;
+  }
+  .headerTitle {
+    position: static;
+    transform: none;
+    font-size: 20px;
+  }
+  .links-box {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-25px, -50%);
+  }
+  .logo {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .headBtn {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .headerTitle {
+    font-size: 16px;
+  }
+  .Header {
+    padding: 25px;
+    height: 50px;
+  }
+  .link {
+    width: 30px;
+    height: 30px;
+  }
+  .links-box {
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerTitle {
+    font-size: 12px;
+    width: 100px;
+  }
+  .headBtn {
+    font-size: 10px;
+    width: 100px;
+  }
+  .link {
+    width: 20px;
+    height: 20px;
+  }
+  .links-box {
+    width: 100px;
+  }
+
+  .headBtn {
+    display: none;
+  }
+  .minibtn {
+    display: block;
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .headerTitle {
+    font-size: 10px;
+    width: 75px;
+  }
+  .link {
+    width: 18px;
+    height: 18px;
+  }
+  .links-box {
+    width: 70px;
+  }
+  .minibtn {
+    font-size: 8px;
+    padding: 3px;
+  }
 }

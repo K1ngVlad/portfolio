@@ -67,7 +67,11 @@
   transform: scale(1.1);
 }
 
-.swiper-pagination {
-  /* background: blue; */
-  /* transform: translate(100px 100px); */
+@media screen and (max-width: 1399px) {
+  .leftNav,
+  .rightNav {
+    width: 75px;
+    height: 75px;
+    font-size: 45px;
+  }
 }

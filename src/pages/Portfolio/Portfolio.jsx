@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './style.css';
 
@@ -25,13 +24,11 @@ const Portfolio = (props) => {
   return (
     <div className="portfolio">
       <section className="portfolio-box">
-        {/* <NavLink className="btnToStartLink" to="/">
-          <button className="btnToStart">На главную</button>
-        </NavLink> */}
         <PageTitle>Портфолио</PageTitle>
         <Swiper
           className="portfolio-swiper"
           modules={[Navigation, Pagination]}
+          loop={true}
           pagination={{
             clickable: true,
             enabled: true,

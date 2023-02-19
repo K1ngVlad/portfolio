@@ -8,6 +8,7 @@ const Header = (props) => {
       <div className="logo">
         <a href="mailto:kingvlad3008@gmail.com">
           <button className="headBtn">Написать на почту</button>
+          <button className="minibtn">Написать</button>
         </a>
       </div>
       <div draggable={false} className="links-box noselect">

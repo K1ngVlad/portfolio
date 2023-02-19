@@ -28,3 +28,46 @@
   justify-content: space-between;
   height: 80px;
 }
+
+@media screen and (max-width: 1399px) {
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+  .aboutName {
+    font-size: 30px;
+  }
+  .blockquote {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .aboutInfo {
+    margin-left: 20px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .avatar {
+    width: 124px;
+    height: 124px;
+  }
+  .aboutName {
+    font-size: 25px;
+  }
+  .blockquote {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .aboutInfo {
+    margin-left: 10px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aboutName {
+    font-size: 20px;
+  }
+}

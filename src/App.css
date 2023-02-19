@@ -23,6 +23,20 @@ body {
   transition: 0.3s;
 }
 
+@media screen and (max-width: 1399px) {
+  .btn {
+    font-size: 16px;
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .btn {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
 .btn:hover {
   background-color: rgb(3, 107, 121);
 }
@@ -49,6 +63,7 @@ a {
 
 .app {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 100vw;

@@ -1,5 +1,5 @@
 import './style.css';
-import avatar from '../../assets/avatar/zwai.png';
+import avatar from '../../assets/avatar/vlad.png';
 
 const TopAbout = () => {
   return (
@@ -8,7 +8,8 @@ const TopAbout = () => {
       <div className="aboutInfo">
         <h2 className="aboutName">Владислав Хитрунов</h2>
         <blockquote className="blockquote">
-          Гав вав, "фыркает", ав гав гав, "завывает"
+          Правильно выполненная работа — это еще не работа, выполненная
+          качественно!
         </blockquote>
       </div>
     </div>
