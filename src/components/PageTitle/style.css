@@ -67,3 +67,13 @@
     margin-left: 20px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .pageTitleBox {
+    height: 20px;
+  }
+  .pageTitle {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+}

@@ -19,7 +19,7 @@ const Main = (props) => {
         )}
       </Transition>
       <main className="main page">
-        <Transition unmountOnExit mountOnEnter in={props.start} timeout={2000}>
+        {/* <Transition unmountOnExit mountOnEnter in={props.start} timeout={2000}>
           {(state) => {
             return (
               <PageTitle className={`mainPage ${state}`}>
@@ -27,7 +27,7 @@ const Main = (props) => {
               </PageTitle>
             );
           }}
-        </Transition>
+        </Transition> */}
         <Transition unmountOnExit mountOnEnter in={props.start} timeout={2000}>
           {(state) => (
             <div className={`swiper-box ${state}`}>
@@ -40,10 +40,24 @@ const Main = (props) => {
           {(state) => (
             <div className={`btnsBox ${state}`}>
               <NavLink to="./about">
-                <button className={'btn'}>Обо мне</button>
+                <button className={'btn btnlol'}>Обо мне</button>
               </NavLink>
               <NavLink to="./portfolio">
-                <button className={'btn'}>Посмотреть больше работ</button>
+                <button className={'btn btnlol'}>
+                  Посмотреть больше работ
+                </button>
+              </NavLink>
+            </div>
+          )}
+        </Transition>
+        <Transition unmountOnExit mountOnEnter in={props.start} timeout={1500}>
+          {(state) => (
+            <div className={`miniBtns ${state}`}>
+              <NavLink to="./about">
+                <button className="miniBtn">Обо мне</button>
+              </NavLink>
+              <NavLink to="./portfolio">
+                <button className="miniBtn">Посмотреть больше работ</button>
               </NavLink>
             </div>
           )}

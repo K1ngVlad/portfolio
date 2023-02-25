@@ -3,9 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { portfolio } from '../../api/portfolio';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/parallax';
 
 import './style.css';
 

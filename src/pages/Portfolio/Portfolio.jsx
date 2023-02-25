@@ -42,7 +42,8 @@ const Portfolio = (props) => {
                 '</span>'
               );
             },
-            currentClass: 'yes',
+            el: '.bulBox',
+            // currentClass: 'yes',
           }}
           navigation={{
             clickable: true,
@@ -53,7 +54,7 @@ const Portfolio = (props) => {
         >
           {api.map((e, i) => {
             return (
-              <SwiperSlide key={i}>
+              <SwiperSlide className="port-warp" key={i}>
                 <div className="portfolioPage">
                   {e.map((e) => {
                     if (e) {
@@ -84,11 +85,12 @@ const Portfolio = (props) => {
               </SwiperSlide>
             );
           })}
-          <div className="portfolioBottom">
-            <button className="leftPortfolioBtn noselect">🡸</button>
-            <button className="rightPortfolioBtn noselect">🡺</button>
-          </div>
         </Swiper>
+        <div className="portfolioBottom">
+          <button className="leftPortfolioBtn noselect">🡸</button>
+          <div className="bulBox"></div>
+          <button className="rightPortfolioBtn noselect">🡺</button>
+        </div>
       </section>
     </div>
   );

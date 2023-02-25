@@ -52,7 +52,6 @@ const About = (props) => {
             </p>
           </div>
         </div>
-        <hr className="aboutHr" />
       </div>
     </div>
   );

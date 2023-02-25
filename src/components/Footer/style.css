@@ -21,3 +21,27 @@
     height: auto;
   }
 }
+
+@media screen and (max-width: 1299px) {
+  .footer {
+    font-size: 15px;
+    padding-left: 25px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    font-size: 10px;
+    padding-left: 15px;
+    line-height: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    font-size: 6px;
+    padding-left: 6px;
+    line-height: 6px;
+  }
+}
