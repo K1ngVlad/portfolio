@@ -6,6 +6,8 @@ import canban from '../assets/portfolio/canban.png';
 import tetris from '../assets/portfolio/tetris.png';
 import calculator from '../assets/portfolio/calculator.png';
 import snake from '../assets/portfolio/snake.png';
+import home from '../assets/portfolio/home.png';
+import theater from '../assets/portfolio/theater.png';
 
 const fullPortfolio = [
   {
@@ -63,6 +65,20 @@ const fullPortfolio = [
     img: snake,
     url: 'https://k1ngvlad.github.io/SnakeGame-PIXI-JS/',
     gitHub: 'https://github.com/K1ngVlad/SnakeGame-PIXI-JS',
+  },
+  {
+    id: 8,
+    name: 'Дом лучшей еды',
+    img: home,
+    url: 'https://k1ngvlad.github.io/home/',
+    gitHub: 'https://github.com/K1ngVlad/home',
+  },
+  {
+    id: 9,
+    name: 'Большой театр',
+    img: theater,
+    url: 'https://k1ngvlad.github.io/theater/',
+    gitHub: 'https://github.com/K1ngVlad/theater',
   },
 ];
 
