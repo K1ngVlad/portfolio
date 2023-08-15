@@ -1,5 +1,5 @@
 import './style.css';
-import { portfolio } from '../../api/portfolio';
+import { portfolio } from '../../data/portfolio';
 
 import git from '../../assets/svg/github.svg';
 

@@ -1,6 +1,6 @@
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { portfolio } from '../../api/portfolio';
+import { portfolio } from '../../data/portfolio';
 
 import 'swiper/css';
 import 'swiper/css/pagination';

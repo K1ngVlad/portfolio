@@ -3,7 +3,7 @@ import './style.css';
 
 import { Navigation, Pagination } from 'swiper';
 
-import { fullPortfolio } from '../../api/fullPortfolio';
+import { fullPortfolio } from '../../data/fullPortfolio';
 import { useEffect } from 'react';
 import { PageTitle } from '../../components/PageTitle';
 
