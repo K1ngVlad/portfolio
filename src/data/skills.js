@@ -55,6 +55,10 @@ const skills = [
     name: 'GitHub',
     url: 'https://github.com',
   },
+  {
+    name: 'ReactNative',
+    url: 'https://reactnative.dev/',
+  },
 ];
 
 export { skills };

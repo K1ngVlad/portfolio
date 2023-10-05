@@ -1,5 +1,5 @@
 import './style.css';
-import avatar from '../../assets/avatar/vlad.png';
+import avatar from '../../assets/avatar/avatar.jpg';
 
 const TopAbout = () => {
   return (
