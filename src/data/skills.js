@@ -48,8 +48,12 @@ const skills = [
     url: 'https://expressjs.com',
   },
   {
-    name: 'WebPack',
+    name: 'Webpack',
     url: 'https://webpack.js.org',
+  },
+  {
+    name: 'Git',
+    url: 'https://git-scm.com/',
   },
   {
     name: 'GitHub',
@@ -58,6 +62,22 @@ const skills = [
   {
     name: 'ReactNative',
     url: 'https://reactnative.dev/',
+  },
+  {
+    name: 'NestJs',
+    url: 'https://nestjs.com/',
+  },
+  {
+    name: 'NestJs',
+    url: 'https://nestjs.com/',
+  },
+  {
+    name: 'SocketIo',
+    url: 'https://socket.io/',
+  },
+  {
+    name: 'Mobx',
+    url: 'https://mobx.js.org/README.html',
   },
 ];
 
